@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class Level5Activity extends AppCompatActivity {
@@ -22,7 +23,9 @@ public class Level5Activity extends AppCompatActivity {
     ImageView ivRight, ivWrong;
 
     String jwb1, jwb2, jwb3, jwb4, jwb5, ans1, ans2, ans3, ans4, ans5;
-    Integer skor, live;
+    Integer skor, mstk;
+
+    LinearLayout layoutJwb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +48,8 @@ public class Level5Activity extends AppCompatActivity {
 
         btnSubmit = findViewById(R.id.btn_submit);
 
+        layoutJwb = findViewById(R.id.layout_answer);
+
         tvAsk.setText("Cemilan lokal paling favorit?");
 
         btnSubmit.setOnClickListener(new View.OnClickListener() {
@@ -66,14 +71,7 @@ public class Level5Activity extends AppCompatActivity {
         ans4 = "lemper";
         ans5 = "onde-onde";
 
-        ImageButton btnHome = findViewById(R.id.btn_back);
-        btnHome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                finish();
-            }
-        });
+        mstk = 0;
     }
 
     private void check() {
@@ -142,11 +140,17 @@ public class Level5Activity extends AppCompatActivity {
             wrongAns.start();
             etAnswer.setText(null);
 
-            String mistake = tvLive.getText().toString();
-            StringBuilder sb = new StringBuilder(mistake);
-            sb.deleteCharAt(0);
-            String result = sb.toString();
-            tvLive.setText(result);
+            if (mstk == 0) {
+                tvLive.setText("X");
+                mstk = 1;
+            } else if (mstk == 1) {
+                tvLive.setText("XX");
+                mstk = 2;
+            } else if (mstk == 2) {
+                tvLive.setText("XXX");
+                mstk = 0;
+                showMistake();
+            }
 
             Integer skors = skor;
             String skor = String.valueOf(skors);
@@ -155,14 +159,29 @@ public class Level5Activity extends AppCompatActivity {
         }
     }
 
+    private void showMistake() {
+        new CountDownTimer(5000, 1000) {
+
+            public void onTick(long millisUntilFinished) {
+
+            }
+
+            public void onFinish() {
+                tvLive.setText("");
+            }
+        }.start();
+    }
+
     private void showRight() {
         new CountDownTimer(2000, 1000) {
 
             public void onTick(long millisUntilFinished) {
+                layoutJwb.setVisibility(View.GONE);
                 ivRight.setVisibility(View.VISIBLE);
             }
 
             public void onFinish() {
+                layoutJwb.setVisibility(View.VISIBLE);
                 ivRight.setVisibility(View.GONE);
             }
         }.start();
@@ -172,10 +191,12 @@ public class Level5Activity extends AppCompatActivity {
         new CountDownTimer(2000, 1000) {
 
             public void onTick(long millisUntilFinished) {
+                layoutJwb.setVisibility(View.GONE);
                 ivWrong.setVisibility(View.VISIBLE);
             }
 
             public void onFinish() {
+                layoutJwb.setVisibility(View.VISIBLE);
                 ivWrong.setVisibility(View.GONE);
             }
         }.start();
