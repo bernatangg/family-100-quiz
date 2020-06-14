@@ -7,16 +7,14 @@ import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-public class Level1Activity extends AppCompatActivity {
+public class Level6Activity extends AppCompatActivity {
 
     TextView tvJwb1, tvJwb2, tvJwb3, tvJwb4, tvJwb5, tvAsk, tvSkor, tvLive;
     EditText etAnswer;
@@ -29,7 +27,7 @@ public class Level1Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_basic_level);
+        setContentView(R.layout.activity_level6);
 
         tvJwb1 = findViewById(R.id.jwb_1);
         tvJwb2 = findViewById(R.id.jwb_2);
@@ -47,7 +45,7 @@ public class Level1Activity extends AppCompatActivity {
 
         btnSubmit = findViewById(R.id.btn_submit);
 
-        tvAsk.setText("Hal apa yang paling sering dilakukan dari smartphone?");
+        tvAsk.setText("Setelah absen kantor, apa yang sering dilakukan?");
 
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,17 +54,17 @@ public class Level1Activity extends AppCompatActivity {
             }
         });
 
-        jwb1 = "CHATING";
-        jwb2 = "YOUTUBE";
-        jwb3 = "MAIN GAME";
-        jwb4 = "BELANJA ONLINE";
-        jwb5 = "UPDATE STATUS";
+        jwb1 = "MENUJU TOILET";
+        jwb2 = "KE RUANGAN KERJA";
+        jwb3 = "SARAPAN";
+        jwb4 = "BUKA HP/SMARTPHONE";
+        jwb5 = "BACA KORAN";
 
-        ans1 = "chating";
-        ans2 = "youtube";
-        ans3 = "main game";
-        ans4 = "belanja online";
-        ans5 = "update status";
+        ans1 = "menuju toilet";
+        ans2 = "ke ruangan kerja";
+        ans3 = "sarapan";
+        ans4 = "buka hp/smartphone";
+        ans5 = "baca koran";
 
         ImageButton btnHome = findViewById(R.id.btn_back);
         btnHome.setOnClickListener(new View.OnClickListener() {
@@ -76,7 +74,6 @@ public class Level1Activity extends AppCompatActivity {
                 finish();
             }
         });
-
     }
 
     private void check() {
@@ -91,7 +88,7 @@ public class Level1Activity extends AppCompatActivity {
             tvJwb1.setText(jwb1);
             etAnswer.setText(null);
 
-            Integer skors = skor + 52;
+            Integer skors = skor + 48;
             String skor = String.valueOf(skors);
             tvSkor.setText(skor);
 
@@ -102,7 +99,7 @@ public class Level1Activity extends AppCompatActivity {
             tvJwb2.setText(jwb2);
             etAnswer.setText(null);
 
-            Integer skors = skor + 31;
+            Integer skors = skor + 32;
             String skor = String.valueOf(skors);
             tvSkor.setText(skor);
 
@@ -124,7 +121,7 @@ public class Level1Activity extends AppCompatActivity {
             tvJwb4.setText(jwb4);
             etAnswer.setText(null);
 
-            Integer skors = skor + 5;
+            Integer skors = skor + 7;
             String skor = String.valueOf(skors);
             tvSkor.setText(skor);
 
@@ -134,7 +131,7 @@ public class Level1Activity extends AppCompatActivity {
             tvJwb5.setBackgroundColor(Color.parseColor("#51C273"));
             tvJwb5.setText(jwb5);
 
-            Integer skors = skor + 2;
+            Integer skors = skor + 3;
             String skor = String.valueOf(skors);
             tvSkor.setText(skor);
 
