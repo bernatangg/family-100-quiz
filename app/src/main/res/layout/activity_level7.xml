@@ -6,148 +6,168 @@
     android:layout_height="wrap_content"
     android:background="@drawable/bg_quiz"
     android:orientation="vertical"
-    android:padding="32dp"
+    android:padding="16dp"
     tools:context=".Level1Activity">
 
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:id="@+id/tv_live"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:layout_marginTop="12dp"
-            android:textColor="@color/red50"
-            android:layout_alignParentStart="true"
-            android:textStyle="bold"
-            android:textSize="28sp" />
-
-        <TextView
-            android:id="@+id/tv_skor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0"
-            android:layout_alignParentEnd="true"
-            android:textColor="@color/red60"
-            android:textStyle="bold"
-            android:textSize="48sp" />
-
-    </RelativeLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="7"
-            android:textStyle="bold"
-            android:textSize="32sp"
-            android:layout_alignParentStart="true"/>
-
-        <TextView
-            android:id="@+id/tv_ask"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="LEVEL 1"
-            android:layout_marginTop="72dp"
-            android:textStyle="italic"
-            android:textSize="20sp"
-            android:gravity="center_horizontal"/>
+        android:layout_height="match_parent">
 
         <LinearLayout
-            android:id="@+id/layout_answer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:visibility="visible"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/jwb_1"
-                android:layout_marginTop="8dp"
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_live"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_marginTop="12dp"
+                    android:textColor="@color/red50"
+                    android:layout_alignParentStart="true"
+                    android:textStyle="bold"
+                    android:textSize="28sp" />
+
+                <TextView
+                    android:id="@+id/tv_skor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/red60"
+                    android:textStyle="bold"
+                    android:textSize="48sp" />
+
+            </RelativeLayout>
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="8dp"
-                android:background="@color/blue40"
-                android:gravity="center_horizontal"
-                android:textColor="#FFF"/>
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/jwb_2"
-                android:layout_marginTop="8dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="8dp"
-                android:background="@color/blue40"
-                android:gravity="center_horizontal"
-                android:textColor="#FFF"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7"
+                    android:textStyle="bold"
+                    android:textSize="32sp"
+                    android:layout_alignParentStart="true"/>
 
-            <TextView
-                android:id="@+id/jwb_3"
-                android:layout_marginTop="8dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="8dp"
-                android:background="@color/blue40"
-                android:gravity="center_horizontal"
-                android:textColor="#FFF"/>
+                <TextView
+                    android:id="@+id/tv_ask"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="LEVEL 1"
+                    android:layout_marginTop="32dp"
+                    android:textStyle="italic"
+                    android:textSize="20sp"
+                    android:gravity="center_horizontal"/>
 
-            <TextView
-                android:id="@+id/jwb_4"
-                android:layout_marginTop="8dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="8dp"
-                android:background="@color/blue40"
-                android:gravity="center_horizontal"
-                android:textColor="#FFF"/>
+                <LinearLayout
+                    android:id="@+id/layout_answer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/jwb_5"
-                android:layout_marginTop="8dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="8dp"
-                android:background="@color/blue40"
-                android:gravity="center_horizontal"
-                android:textColor="#FFF"/>
+                    <TextView
+                        android:id="@+id/jwb_1"
+                        android:layout_marginTop="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:background="@color/blue40"
+                        android:gravity="center_horizontal"
+                        android:textColor="#FFF"/>
 
+                    <TextView
+                        android:id="@+id/jwb_2"
+                        android:layout_marginTop="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:background="@color/blue40"
+                        android:gravity="center_horizontal"
+                        android:textColor="#FFF"/>
+
+                    <TextView
+                        android:id="@+id/jwb_3"
+                        android:layout_marginTop="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:background="@color/blue40"
+                        android:gravity="center_horizontal"
+                        android:textColor="#FFF"/>
+
+                    <TextView
+                        android:id="@+id/jwb_4"
+                        android:layout_marginTop="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:background="@color/blue40"
+                        android:gravity="center_horizontal"
+                        android:textColor="#FFF"/>
+
+                    <TextView
+                        android:id="@+id/jwb_5"
+                        android:layout_marginTop="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:background="@color/blue40"
+                        android:gravity="center_horizontal"
+                        android:textColor="#FFF"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_right"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_check"/>
+
+                <ImageView
+                    android:id="@+id/iv_wrong"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_wrong"/>
+
+                <EditText
+                    android:id="@+id/et_answer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:capitalize="sentences"
+                    android:layout_marginTop="8dp"/>
+
+                <Button
+                    android:id="@+id/btn_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Survey Membuktikan!!!!!!"
+                    android:textColor="#FFF"
+                    android:background="@color/orange60"
+                    android:layout_marginTop="12dp"/>
+
+                <Button
+                    android:id="@+id/btn_kunci"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="KUNCI"
+                    android:textColor="#FFF"
+                    android:background="@color/orange60"
+                    android:layout_marginTop="12dp"/>
+
+            </LinearLayout>
         </LinearLayout>
+    </ScrollView>
 
-        <ImageView
-            android:id="@+id/iv_right"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="gone"
-            android:src="@drawable/ic_check"/>
-
-        <ImageView
-            android:id="@+id/iv_wrong"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="gone"
-            android:src="@drawable/ic_wrong"/>
-
-        <EditText
-            android:id="@+id/et_answer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:capitalize="sentences"
-            android:layout_marginTop="8dp"/>
-
-        <Button
-            android:id="@+id/btn_submit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Survey Membuktikan!!!!!!"
-            android:textColor="#FFF"
-            android:background="@color/orange60"
-            android:layout_marginTop="12dp"/>
-
-    </LinearLayout>
 
 </LinearLayout>

@@ -19,7 +19,7 @@ public class Level6Activity extends AppCompatActivity {
 
     TextView tvJwb1, tvJwb2, tvJwb3, tvJwb4, tvJwb5, tvAsk, tvSkor, tvLive;
     EditText etAnswer;
-    Button btnSubmit;
+    Button btnSubmit, btnKunci;
     ImageView ivRight, ivWrong;
 
     String jwb1, jwb1_1,
@@ -56,6 +56,7 @@ public class Level6Activity extends AppCompatActivity {
         etAnswer = findViewById(R.id.et_answer);
 
         btnSubmit = findViewById(R.id.btn_submit);
+        btnKunci = findViewById(R.id.btn_kunci);
 
         layoutJwb = findViewById(R.id.layout_answer);
 
@@ -65,6 +66,12 @@ public class Level6Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 check();
+            }
+        });
+        btnKunci.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showKey();
             }
         });
 
@@ -88,6 +95,20 @@ public class Level6Activity extends AppCompatActivity {
         ans5 = "baca koran";
 
         mstk = 0;
+
+    }
+
+    private void showKey() {
+        tvJwb1.setBackgroundColor(Color.parseColor("#51C273"));
+        tvJwb1.setText(jwb1);
+        tvJwb2.setBackgroundColor(Color.parseColor("#51C273"));
+        tvJwb2.setText(jwb2);
+        tvJwb3.setBackgroundColor(Color.parseColor("#51C273"));
+        tvJwb3.setText(jwb3);
+        tvJwb4.setBackgroundColor(Color.parseColor("#51C273"));
+        tvJwb4.setText(jwb4);
+        tvJwb5.setBackgroundColor(Color.parseColor("#51C273"));
+        tvJwb5.setText(jwb5);
 
     }
 
