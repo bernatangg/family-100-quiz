@@ -81,7 +81,7 @@ public class Level7Activity extends AppCompatActivity {
         String firstScore = tvSkor.getText().toString();
         skor = Integer.parseInt(firstScore);
 
-        if (jwb1.equals(answer) || ans1.equals(answer)) {
+        if (jwb1.toLowerCase().contains(answer.toLowerCase())) {
             tvJwb1.setBackgroundColor(Color.parseColor("#51C273"));
             tvJwb1.setText(jwb1);
             etAnswer.setText(null);
@@ -92,7 +92,7 @@ public class Level7Activity extends AppCompatActivity {
 
             showRight();
             mediaPlayer.start();
-        } else if (jwb2.equals(answer) || ans2.equals(answer)) {
+        } else if (jwb2.toLowerCase().contains(answer.toLowerCase())) {
             tvJwb2.setBackgroundColor(Color.parseColor("#51C273"));
             tvJwb2.setText(jwb2);
             etAnswer.setText(null);
@@ -103,7 +103,7 @@ public class Level7Activity extends AppCompatActivity {
 
             showRight();
             mediaPlayer.start();
-        } else if (jwb3.equals(answer) || ans3.equals(answer)) {
+        } else if (jwb3.toLowerCase().contains(answer.toLowerCase())) {
             tvJwb3.setBackgroundColor(Color.parseColor("#51C273"));
             tvJwb3.setText(jwb3);
             etAnswer.setText(null);
@@ -114,7 +114,7 @@ public class Level7Activity extends AppCompatActivity {
 
             showRight();
             mediaPlayer.start();
-        } else if (jwb4.equals(answer) || ans4.equals(answer)) {
+        } else if (jwb4.toLowerCase().contains(answer.toLowerCase())) {
             tvJwb4.setBackgroundColor(Color.parseColor("#51C273"));
             tvJwb4.setText(jwb4);
             etAnswer.setText(null);
@@ -125,10 +125,10 @@ public class Level7Activity extends AppCompatActivity {
 
             showRight();
             mediaPlayer.start();
-        } else if (jwb5.equals(answer) || ans5.equals(answer)) {
+        } else if (jwb5.toLowerCase().contains(answer.toLowerCase())) {
             tvJwb5.setBackgroundColor(Color.parseColor("#51C273"));
             tvJwb5.setText(jwb5);
-
+            etAnswer.setText(null);
             Integer skors = skor + 5;
             String skor = String.valueOf(skors);
             tvSkor.setText(skor);

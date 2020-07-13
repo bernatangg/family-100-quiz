@@ -131,7 +131,7 @@ public class Level1Activity extends AppCompatActivity {
         } else if (jwb5.equals(answer) || ans5.equals(answer)) {
             tvJwb5.setBackgroundColor(Color.parseColor("#51C273"));
             tvJwb5.setText(jwb5);
-
+            etAnswer.setText(null);
             Integer skors = skor + 2;
             String skor = String.valueOf(skors);
             tvSkor.setText(skor);
