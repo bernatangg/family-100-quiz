@@ -19,10 +19,10 @@ public class Level5Activity extends AppCompatActivity {
 
     TextView tvJwb1, tvJwb2, tvJwb3, tvJwb4, tvJwb5, tvAsk, tvSkor, tvLive;
     EditText etAnswer;
-    Button btnSubmit;
+    Button btnSubmit, btnKunci;
     ImageView ivRight, ivWrong;
 
-    String jwb1, jwb2, jwb3, jwb4, jwb5, ans1, ans2, ans3, ans4, ans5;
+    String jwb1, jwb2, jwb3, jwb4, jwb5, ans1, ans2, ans3, ans4, ans5, jwb3_1, ans3_1, jwb5_1, ans5_1;
     Integer skor, mstk;
 
     LinearLayout layoutJwb;
@@ -47,6 +47,7 @@ public class Level5Activity extends AppCompatActivity {
         etAnswer = findViewById(R.id.et_answer);
 
         btnSubmit = findViewById(R.id.btn_submit);
+        btnKunci = findViewById(R.id.btn_kunci);
 
         layoutJwb = findViewById(R.id.layout_answer);
 
@@ -58,20 +59,45 @@ public class Level5Activity extends AppCompatActivity {
                 check();
             }
         });
+        btnKunci.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showKey();
+            }
+        });
 
         jwb1 = "PEMPEK";
         jwb2 = "PISANG GORENG";
         jwb3 = "TEMPE MENDOAN";
+        jwb3_1 = "MENDOAN";
         jwb4 = "LEMPER";
         jwb5 = "ONDE-ONDE";
+        jwb5_1 = "ONDE-ONDE";
+
 
         ans1 = "pempek";
         ans2 = "pisang goreng";
         ans3 = "tempe mendoan";
+        ans3_1 = "mendoan";
         ans4 = "lemper";
         ans5 = "onde-onde";
+        ans5_1 = "onde onde";
 
         mstk = 0;
+    }
+
+    private void showKey() {
+        tvJwb1.setBackgroundColor(Color.parseColor("#51C273"));
+        tvJwb1.setText(jwb1);
+        tvJwb2.setBackgroundColor(Color.parseColor("#51C273"));
+        tvJwb2.setText(jwb2);
+        tvJwb3.setBackgroundColor(Color.parseColor("#51C273"));
+        tvJwb3.setText(jwb3);
+        tvJwb4.setBackgroundColor(Color.parseColor("#51C273"));
+        tvJwb4.setText(jwb4);
+        tvJwb5.setBackgroundColor(Color.parseColor("#51C273"));
+        tvJwb5.setText(jwb5);
+
     }
 
     private void check() {
@@ -103,7 +129,7 @@ public class Level5Activity extends AppCompatActivity {
 
             showRight();
             mediaPlayer.start();
-        } else if (jwb3.equals(answer) || ans3.equals(answer)) {
+        } else if (jwb3.equals(answer) || ans3.equals(answer) || jwb3_1.equals(answer) || ans3_1.equals(answer)) {
             tvJwb3.setBackgroundColor(Color.parseColor("#51C273"));
             tvJwb3.setText(jwb3);
             etAnswer.setText(null);
@@ -125,10 +151,10 @@ public class Level5Activity extends AppCompatActivity {
 
             showRight();
             mediaPlayer.start();
-        } else if (jwb5.equals(answer) || ans5.equals(answer)) {
+        } else if (jwb5.equals(answer) || ans5.equals(answer) || jwb5_1.equals(answer) || ans5_1.equals(answer)) {
             tvJwb5.setBackgroundColor(Color.parseColor("#51C273"));
             tvJwb5.setText(jwb5);
-
+            etAnswer.setText(null);
             Integer skors = skor + 6;
             String skor = String.valueOf(skors);
             tvSkor.setText(skor);

@@ -28,28 +28,28 @@ public class MainActivity extends AppCompatActivity {
         iv1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), Level1Activity.class));
+//                startActivity(new Intent(getApplicationContext(), Level1Activity.class));
             }
         });
 
         iv2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), Level2Activity.class));
+//                startActivity(new Intent(getApplicationContext(), Level2Activity.class));
             }
         });
 
         iv3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), Level3Activity.class));
+//                startActivity(new Intent(getApplicationContext(), Level3Activity.class));
             }
         });
 
         iv4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), Level4Activity.class));
+//                startActivity(new Intent(getApplicationContext(), Level4Activity.class));
             }
         });
 

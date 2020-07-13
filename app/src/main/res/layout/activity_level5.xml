@@ -148,6 +148,15 @@
             android:background="@color/orange60"
             android:layout_marginTop="12dp"/>
 
+        <Button
+            android:id="@+id/btn_kunci"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="KUNCI"
+            android:textColor="#FFF"
+            android:background="@color/orange60"
+            android:layout_marginTop="12dp"/>
+
     </LinearLayout>
 
 </LinearLayout>
