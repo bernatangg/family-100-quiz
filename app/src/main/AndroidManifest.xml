@@ -14,20 +14,29 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
-        <activity android:name=".Level8Activity"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".Level7Activity"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".Level6Activity"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".Level5Activity"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".Level4Activity"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".Level3Activity"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".Level2Activity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".FinalActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Level8Activity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Level7Activity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Level6Activity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Level5Activity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Level4Activity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Level3Activity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Level2Activity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Level1Activity"
             android:theme="@style/AppTheme.NoActionBar" />

@@ -9,7 +9,7 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageView iv1, iv2, iv3, iv4, iv5, iv6, iv7, iv8;
+    ImageView iv1, iv2, iv3, iv4, iv5, iv6, iv7, iv8, iv9;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         iv6 = findViewById(R.id.iv_6);
         iv7 = findViewById(R.id.iv_7);
         iv8 = findViewById(R.id.iv_8);
+        iv9 = findViewById(R.id.iv_9);
 
         iv1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,28 +57,35 @@ public class MainActivity extends AppCompatActivity {
         iv5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), Level5Activity.class));
+//                startActivity(new Intent(getApplicationContext(), Level5Activity.class));
             }
         });
 
         iv6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), Level6Activity.class));
+//                startActivity(new Intent(getApplicationContext(), Level6Activity.class));
             }
         });
 
         iv7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), Level7Activity.class));
+//                startActivity(new Intent(getApplicationContext(), Level7Activity.class));
             }
         });
 
         iv8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), Level8Activity.class));
+//                startActivity(new Intent(getApplicationContext(), Level8Activity.class));
+            }
+        });
+
+        iv9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), FinalActivity.class));
             }
         });
     }
